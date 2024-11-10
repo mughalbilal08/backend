@@ -23,7 +23,7 @@ mongoose.connect('mongodb://localhost:27017/ecommerce', {
 // Use the routes
 app.use('/products', productRoutes);  // Route for products
 app.use('/auth', authRoutes);  // Route for authentication
-
+app.use(cors({ origin: 'https://front-end-eta-one-74.vercel.app/' }));
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
